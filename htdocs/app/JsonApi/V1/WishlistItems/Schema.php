@@ -34,10 +34,10 @@ class Schema extends SchemaProvider
             'image_url' => $resource->image_url,
             'asin' => $resource->asin,
 
-            'qty' => $resource->qty,
+            'qty' => (int) $resource->qty,
             'base_price' => [
-                'currency' => $resource->currency,
-                'amount' => $resource->amount,
+                'currency' => strtoupper($resource->currency),
+                'amount' => (float) $resource->amount,
             ],
 
             'created_at' => $resource->created_at ? $resource->created_at->toAtomString() : null,

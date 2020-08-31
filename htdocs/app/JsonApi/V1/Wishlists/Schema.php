@@ -26,7 +26,7 @@ class Schema extends SchemaProvider
     {
         return [
             'items' => [
-                self::SHOW_SELF => true,
+                self::SHOW_SELF => false,
                 self::SHOW_RELATED => true,
                 self::DATA => function () use ($wishlist) {
                     return $wishlist->items;

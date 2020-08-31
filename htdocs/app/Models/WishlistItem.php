@@ -27,7 +27,7 @@ class WishlistItem extends Model
     protected $primaryKey = 'uuid';
     public $incrementing = false;
 
-    protected $fillable = ['title', 'currency', 'amount', 'meta', 'qty', 'image_url', 'asin'];
+    protected $fillable = ['title', 'currency', 'amount', 'meta', 'qty', 'image_url', 'asin', 'wishlist_uuid'];
 
 
     protected $casts = [

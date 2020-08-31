@@ -23,7 +23,7 @@ JsonApi::register('default')
         $api->resource('wishlists', [
             'has-many' => 'items'
         ])->relationships(function ($relations) {
-            $relations->hasMany('items');
+            $relations->hasMany('wishlist_items');
         });
 
         $api->resource('wishlist_items');
